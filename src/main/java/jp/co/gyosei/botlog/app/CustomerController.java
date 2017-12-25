@@ -26,11 +26,6 @@ public class CustomerController {
 	@Autowired
 	CustinfoRepository custinfoRepository;
 	
-	@RequestMapping("/")
-	public String Home() {
-		return "Customer";
-	}
-	
 	@GetMapping("/Customer")
     public String signup(Model model) {
         model.addAttribute("customerForm", new CustomerForm());
